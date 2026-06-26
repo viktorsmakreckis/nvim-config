@@ -79,9 +79,10 @@ If `brew` gives you a Neovim older than 0.12, install the latest:
 nvim-dap + nvim-dap-ui + netcoredbg.
 
 - On **Apple Silicon** there is no upstream netcoredbg build, so it's supplied by
-  `netcoredbg-macOS-arm64.nvim`, whose `update.sh` runs as a lazy `build` step on
-  install. If debugging ever can't find the binary, run `:Lazy build
-  netcoredbg-macOS-arm64.nvim`.
+  `netcoredbg-macOS-arm64.nvim`, which ships a prebuilt binary in the plugin —
+  nothing to compile, it just works after `:Lazy sync`. To upgrade it later (this
+  compiles from source, needs `cmake` + `clang`), run `./update.sh` inside
+  `~/.local/share/nvim/lazy/netcoredbg-macOS-arm64.nvim`.
 - On Intel macOS / Linux, netcoredbg is installed via mason automatically.
 
 To debug: build your project (`dotnet build`), open a `.cs` file, set a breakpoint

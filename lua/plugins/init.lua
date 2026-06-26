@@ -152,8 +152,10 @@ return {
     dependencies = {
       { "rcarriga/nvim-dap-ui", dependencies = { "nvim-neotest/nvim-nio" } },
       "theHamsta/nvim-dap-virtual-text",
-      -- Ships a working arm64 macOS netcoredbg build (fetched by update.sh).
-      { "Cliffback/netcoredbg-macOS-arm64.nvim", build = "./update.sh" },
+      -- Ships a prebuilt arm64 macOS netcoredbg binary in the repo — no build
+      -- step needed. To upgrade it later (compiles from source, needs cmake +
+      -- clang), run ./update.sh in the plugin dir manually.
+      "Cliffback/netcoredbg-macOS-arm64.nvim",
     },
     config = function()
       require "configs.dap"
