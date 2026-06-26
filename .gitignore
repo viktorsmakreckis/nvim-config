@@ -1,0 +1,15 @@
+# OS / editor junk
+.DS_Store
+*.swp
+*~
+
+# Local spell files
+spell/
+
+# Optional: a machine-local override you don't want tracked.
+# Create lua/local.lua and require it from init.lua if you ever need
+# per-machine tweaks, then it stays out of git.
+lua/local.lua
+
+# NOTE: lazy-lock.json is intentionally NOT ignored — commit it so every
+# machine installs the exact same plugin versions.
